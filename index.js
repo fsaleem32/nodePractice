@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 6000
 const db = require("./config/db")
 
 //access .env file
@@ -12,7 +12,7 @@ dotenv.config();
 db()
 
 
-
+app.use(express.json());
 //routes
 app.get("/" , (req, res) => {
     res.send("asdasdads")
